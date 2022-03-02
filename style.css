@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'nunito',sans-serif;
+}
+.header{
+	min-height: 100vh;
+	width: 100%;
+	background-image:linear-gradient(rgba(4, 9, 30,0.7),rgba(4, 9, 30, 0.7)),url(image/background.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width: 150px;
+	border-radius: 50%;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.nav-links ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 4px;
+	background: #ffff00;
+	display: block;
+	margin: auto;
+	transition: 0.6s;
+	border-radius: 50px;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+.school_name{
+	position: absolute;
+	width: 90%;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center ;
+}
+.school_name h1{
+	font-size: 60px;
+}
+.school_name p{
+	margin: 10px 0 40px;
+	font-size: 17px;
+	color: #fff;
+}
+.vst-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 20px 34px;
+	font-size: 15px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+.vst-btn:hover{
+	border: 1px solid #3366ff;
+	background:#3366ff;
+	transition: 1s;
+}
+@media(max-width: 700px){
+	.school_name h1{
+	font-size: 20px;
+}
+.nav-links ul li{
+	display: block;
+}
+.nav-links{
+position: absolute;
+background: #3366ff;
+height: 100vh;
+width: 200px;
+top: 0;
+right: 0;
+text-align: left;
+z-index: 2;
+}
+}
